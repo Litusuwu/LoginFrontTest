@@ -28,7 +28,11 @@ h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
-
+:root{
+  --colorAzul: #042354;
+  --colorCeleste: #2841dd;
+  --colorRed: #9b081a;
+}
 #contenedor{
   display: flex;
   flex-direction: row;
@@ -42,10 +46,42 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   background-position: 65%;
   color: white;
-  flex-direction: column;
+  font-size: bold;
+  flex-direction: column-reverse;
+  align-items: center;
   flex: 1;
 }
 #formSpace{
-  background-color: whitesmoke;
+  flex-direction: column;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 1;
 }
+#formItself{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#usuarioL{
+  position: absolute;
+  background-color: white;
+  margin: 0.3rem;
+  margin-top: 0.16rem;
+  padding-right: 0.2rem;
+  transition: 0.1s ease;
+  font-size: 0.9em;
+}
+#emailI{
+  border-color: #042354;
+}
+ /* input:focus~#usuarioL,
+input:valid~#usuarioL{
+  color: #2841dd; 
+  background-color: #042354; 
+  transform: translate(2,2);
+  translate: 2px 2px;
+} */
+
