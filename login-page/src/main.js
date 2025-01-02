@@ -1,20 +1,26 @@
-// import './style.css'
 
-const input = document.getElementById('emailI');
-const label = document.getElementById('usuarioL')
+const inputs = document.querySelectorAll('.forma input'); // Selecciona todos los inputs dentro de .forma
 
-input.addEventListener('focus', ()=>{
-    label.style.color = '#00498b';
-    // label.style.transform = 'scale(1.1, 1.1)';
-    label.style.transform = 'translate(2px,-13px) scale(0.7)';
-    label.style.zIndex ='1111';
-    label.style.paddingRight = '0.5rem';
-    input.style.color = '#042354';
-});
+inputs.forEach((input) => {
+    input.addEventListener('blur', () => {
+        const pattern = /^a\d{8}$/;
 
-input.addEventListener('blur', ()=>{
-    label.style.color = 'black';
-    label.style.transform = 'none';
-    // label.style.backgroundColor = 'blue'; 
+        if (!pattern.test(input.value) && input.type === "text" 
+              && input.value.length > 0) {
+            input.classList.add('error');
+            input.classList.add('error1');
+        } else {
+            input.classList.remove('error');
+            input.classList.remove('error1');
+        }
+    });
+
+    input.addEventListener('input', () => {
+        if (input.value.length > 0) {
+            input.classList.add('dentro');
+        } else {
+            input.classList.remove('dentro');
+        }
+    });
 });
 

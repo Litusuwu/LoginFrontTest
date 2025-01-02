@@ -13,17 +13,20 @@
         © Derechos reservados a la PUCP. Perú.
       </div>
       <div id="formSpace">
+        <img id="logo" src="src/LogoPucp.png" alt="Logo de la PUCP" />
         <form id="formItself" action="">
           <div class="forma">
-
-            <div id="usuarioL">Usuario</div>
-            <input id="emailI" type="email">
+            <input id="emailI" type="text" pattern="a\d{8}" required title="Debe comenzar con 'a' seguido de 8 dígitos">
+            <span id="usuarioL">Usuario</span>
           </div>
-          <div>
-            <legend id="contraL">Contraseña</legend>
-            <input type="password">
+          <div class="forma">
+            <input id="emailI" type="password"  required title="Debe comenzar con 'a' seguido de 8 dígitos">
+            <span id="usuarioL">Contraseña</span>
           </div>
+          <button id="loginButton" type="submit">Ingresar</button>
+          <span id="ForgotPassword">¿Olvidaste tu contraseña? Click aquí</span>
         </form>
+        <span id="security">For security reasons, don't forget to log out, even before closing the browser. Read service conditions.</span>
       </div>
     </div>
     <script src="src/main.js"></script>
